@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "teststyle": {
+    "matdesign": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -19,12 +19,12 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "teststyle",
+      "prefix": "matdesign",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/teststyle",
+            "outputPath": "dist/matdesign",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -37,6 +37,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -74,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "teststyle:build:production"
+              "buildTarget": "matdesign:build:production"
             },
             "development": {
-              "buildTarget": "teststyle:build:development"
+              "buildTarget": "matdesign:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "teststyle:build"
+            "buildTarget": "matdesign:build"
           }
         },
         "test": {
@@ -102,6 +103,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
